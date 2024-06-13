@@ -38,7 +38,7 @@ app.use('/login', express.json(), async (req, res) => {
   res.send({ token });
 });
 
-app.use('/graphql', graphqlHTTP((req) => ({
+app.use('/api/akillisalon', graphqlHTTP((req) => ({
   schema: schema,
   graphiql: process.env.NODE_ENV === 'development',
 })));
